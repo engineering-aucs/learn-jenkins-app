@@ -35,12 +35,11 @@ pipeline {
                 '''
             }
         }
-
-        post {
-            // the report is created regardless if the pipeline fails or not
-            always {
-                junit 'test-results/junit.xml'
-            }
+    }
+    post {
+        // the report is created regardless if the pipeline fails or not
+        always {
+            junit 'test-results/junit.xml'
         }
     }
 }
